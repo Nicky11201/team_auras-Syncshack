@@ -1,0 +1,11 @@
+[build]
+  publish = "Game"
+
+# Redirect (not rewrite) the site root to the landing page.
+# A 302 changes the browser's URL to /games-across-time-draft/, so the
+# page's relative asset paths (styles.css, script.js, assets/...) resolve
+# correctly. A 200 rewrite would keep the URL at "/" and break them all.
+[[redirects]]
+  from = "/"
+  to = "/games-across-time-draft/"
+  status = 302
